@@ -1,0 +1,17 @@
+﻿<Window x:Class="Markdown.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Markdown"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <Button DockPanel.Dock="Bottom" Height="30" Visibility="Collapsed">Convert</Button>
+
+            <RichTextBox x:Name="richTextBox" TextChanged="OnTextChanged" Visibility="Collapsed"/>
+            <RichTextBox x:Name="textBox2" local:RichTextBoxHelper.Document="{Binding MarkdownContent}" IsDocumentEnabled="True" IsReadOnly="True"/>
+        </DockPanel>
+    </Grid>
+</Window>
